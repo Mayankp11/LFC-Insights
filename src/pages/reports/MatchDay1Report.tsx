@@ -1,4 +1,4 @@
-// src/pages/MatchDay1Report.tsx
+
 import {
   Box,
   Text,
@@ -9,10 +9,7 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
-import mo from "../../../public/images/SalahVsATM2.webp";
-import lfc from "../../../public/logos/LFC.png";
-import atm from "../../../public/logos/ATM.png";
-import MD1Result from "../../../public/images/Matchday1result.jpg";
+
 import ImageCarousel from "../../components/ImageCarousel";
 import ReportHeader from "../../components/ReportHeader";
 
@@ -20,7 +17,7 @@ const MatchDay1Report = () => {
   const images = [
     "/images/SalahVsATM.webp",
     "/images/IsakDebutATM.webp",
-    mo,
+    "/images/SalahVsATM2.webp",
     "/images/VvdVsATM.avif",
     "/images/Simeone-off.jpg",
   ];
@@ -29,10 +26,10 @@ const MatchDay1Report = () => {
     <>
       {/* Title */}
       <ReportHeader
-        team1Logo={lfc}
-        team2Logo={atm}
+        team1Logo="/logos/LFC.png"
+        team2Logo="/logos/ATM.png"
         date="September 17, 2025"
-        optionalImage={MD1Result}
+        optionalImage="/images/Matchday1result.jpg"
       />
       <Box maxW="7xl" mx="auto" p={6}>
         {/* VVD Winner*/}
@@ -216,7 +213,7 @@ const MatchDay1Report = () => {
                   Perfect Birthday Present
                 </Heading>
                 <Image
-                  src="/images/arneSlot.jpeg" // ✅ public image
+                  src="/images/arneSlot.jpeg" 
                   alt="Gaffer Birthday"
                   borderRadius="xl"
                   mt={2}
@@ -264,7 +261,7 @@ const MatchDay1Report = () => {
             What a dream start to the Champions League! After storming through
             the Premier League with four wins out of four, the Reds were always
             going to come out flying. And just when it looked like the night
-            couldn’t get any better, the skipper popped up with a last-minute
+            couldn't get any better, the skipper popped up with a last-minute
             header to gift the Gaffer the perfect birthday present!
           </Text>
         </Box>
