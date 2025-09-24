@@ -1,11 +1,11 @@
 // src/App.tsx
 import { Box, Button, Flex } from "@chakra-ui/react";
 import Title from "./components/Title";
-import TestMatchDay from "./pages/TestMatchDay";
 import MatchDay1Report from "./pages/reports/MatchDay1Report";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./pages/Footer";
 import RouterWithTransition from "./components/animation/RouterWithTransition";
+import MatchDay from "./pages/MatchDay";
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
                 </Box>
 
                 <Box>
-                  <TestMatchDay matchId={1} />
+                  <MatchDay matchId={1} />
                 </Box>
 
                 <Link to="/match/atm/report">
