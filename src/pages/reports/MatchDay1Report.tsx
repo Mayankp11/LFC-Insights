@@ -197,7 +197,7 @@ const MatchDay1Report = () => {
                   fontSize="clamp(16px, 4vw, 36px)"
                   lineHeight="1.2"
                 >
-                  Liverpool's five-match streak of last-minute winning goals
+                  Liverpool's five-match winning streak with late-minute winner
                   continues...
                 </Text>
               </CardBody>
