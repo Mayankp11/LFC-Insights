@@ -47,6 +47,7 @@ const MatchDay1Report = () => {
                 // controls
                 loop
                 muted
+                playsInline
                 style={{
                   borderRadius: "12px",
                   maxHeight: "500px",
@@ -84,7 +85,7 @@ const MatchDay1Report = () => {
               position="relative"
               minH="300px"
             >
-              {/* Background Image */}
+              {/* Isak Debut */}
               <Image
                 src="/images/Isak-lfc-Signing-Day.jpg"
                 alt="Isak Debut"
@@ -98,7 +99,7 @@ const MatchDay1Report = () => {
                 opacity={0.8} // adjust to make text more readable
               />
 
-              {/* Overlay to darken background */}
+              {/* Overlay text*/}
               <Box
                 position="absolute"
                 top={0}
@@ -108,8 +109,6 @@ const MatchDay1Report = () => {
                 bg="rgba(0,0,0,0.4)" // adjust darkness
                 zIndex={1}
               />
-
-              {/* Text on top */}
               <CardBody
                 position="relative"
                 zIndex={2}
@@ -126,6 +125,8 @@ const MatchDay1Report = () => {
                 </Heading>
               </CardBody>
             </Card>
+
+            {/* VVD 25 goals */}
             <Card
               shadow="lg"
               borderRadius="2xl"
@@ -151,7 +152,7 @@ const MatchDay1Report = () => {
               </CardBody>
             </Card>
 
-            {/* Video Card */}
+            {/* VVD Slowmo */}
             <Card
               shadow="lg"
               borderRadius="2xl"
@@ -165,6 +166,7 @@ const MatchDay1Report = () => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                     style={{
                       borderRadius: "12px",
                       maxHeight: "500px",
@@ -175,7 +177,7 @@ const MatchDay1Report = () => {
               </CardBody>
             </Card>
 
-            {/* Text Only Card */}
+            {/* text- 5 match late winner streak */}
             <Card
               shadow="lg"
               borderRadius="2xl"
@@ -201,7 +203,7 @@ const MatchDay1Report = () => {
               </CardBody>
             </Card>
 
-            {/* Birthday Card */}
+            {/* Arne Slot birthday card */}
             <Card
               shadow="lg"
               borderRadius="2xl"
@@ -255,7 +257,6 @@ const MatchDay1Report = () => {
         {/* Match Summary */}
         <Box mt={10} textAlign="left">
           <Heading fontSize="2xl" mb={4}>
-           
           </Heading>
           <Text fontSize="md" fontFamily={"Calistoga"} lineHeight="tall" fontWeight={"medium"}>
             What a dream start to the Champions League! After storming through
