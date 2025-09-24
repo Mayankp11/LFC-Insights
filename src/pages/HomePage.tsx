@@ -3,7 +3,7 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 import Match from "../components/Match";
-import { matches } from "../data/matches";
+import { matches } from "../data/fixtures";
 
 function HomePage() {
   return (

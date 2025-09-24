@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { matches, type Match } from "../data/matches";
+import { matches, type Match } from "../data/fixtures";
 import React from "react";
 
 
