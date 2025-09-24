@@ -18,9 +18,9 @@ export const matches: Match[] = [
   },
   {
     id: 2,
-    date: "November 17, 2025",
-    team1: { name: "Liverpool FC", logoUrl: "/logos/LFC.png", score: 2 },
-    team2: { name: "Real Madrid", logoUrl: "/logos/ATM.png", score: 1 },
-    venue: "Random",
+    date: "September 30, 2025",
+    team1: { name: "Liverpool FC", logoUrl: "/logos/LFC.png"},
+    team2: { name: "Galatasaray", logoUrl: "/logos/Galatasaray-logo.png"},
+    venue: "Rams Park",
   },
 ];
