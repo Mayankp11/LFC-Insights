@@ -1,6 +1,7 @@
 // src/components/ReportHeader.tsx
 import { Box, SimpleGrid, Image } from "@chakra-ui/react";
 import React from "react";
+import HomeButton from "./button/HomeButton";
 
 interface ReportHeaderProps {
   team1Logo: string;
@@ -21,48 +22,42 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
         {/* Team logos row */}
         <Box
           display="flex"
-          justifyContent="center"
           alignItems="center"
-          backgroundColor={"blackAlpha.900"}
-          gap={4}
-          //   border="2px solid black"
+          justifyContent="space-between"
+          backgroundColor="blackAlpha.900"
           p={4}
         >
-          <Image
-            src={team1Logo}
-            alt="Team 1"
-            boxSize="80px"
-            objectFit="contain"
-            bg={"transparent"}
-          />
-          <Image
-            src={team2Logo}
-            alt="Team 2"
-            boxSize="80px"
-            objectFit="contain"
-          />
+          {/* Left spacer "can be empyty" */}
+          <Box/>
+
+          {/* Centered logos */}
+          <Box display="flex" gap={4}>
+            <Image
+              src={team1Logo}
+              alt="Team 1"
+              boxSize="80px"
+              objectFit="contain"
+              bg="transparent"
+            />
+            <Image
+              src={team2Logo}
+              alt="Team 2"
+              boxSize="80px"
+              objectFit="contain"
+            />
+          </Box>
+
+          {/* Home button pinned to right */}
+          <HomeButton />
         </Box>
 
-        {/* Match date */}
-        {/* <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      border="2px solid black"
-      p={4}
-    >
-      <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="semibold">
-        {date}
-      </Text>
-    </Box> */}
-
-        {/* Optional image */}
+        {/* Full time score */}
         <Box
           display="flex"
-          justifyContent="center" // centers horizontally
-          alignItems="center" // centers vertically
+          justifyContent="center"
+          alignItems="center"
           border="2px solid black"
-          w="100%" // full width of parent
+          w="100%"
           p={4}
         >
           {optionalImage && (
@@ -70,8 +65,8 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
               src={optionalImage}
               alt="Optional"
               maxW="50%" // image will not exceed container width
-              maxH="500px" // optional max height
-              objectFit="contain" // fit entire image inside box without cropping
+              maxH="500px"
+              objectFit="contain"
               borderRadius="md"
               mx="auto" // ensure the image is centered horizontally
             />
