@@ -20,6 +20,8 @@
     "@fontsource/calistoga": "^5.2.7",
     "@fontsource/rouge-script": "^5.2.7",
     "@lottiefiles/dotlottie-react": "^0.17.1",
+    "chakra-icons": "^0.0.0",
+    "dayjs": "^1.11.18",
     "framer-motion": "^12.23.16",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.544.0",
