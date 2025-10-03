@@ -37,4 +37,33 @@ export const matches: Match[] = [
     team2: { name: "Real Madrid", logoUrl: "/logos/Real-Madrid-logo.png" },
     venue: "Anfield",
   },
+  {
+    id: 5,
+    date: "November 26, 2025. 2PM CDT",
+    team1: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
+    team2: { name: "PSV", logoUrl: "/logos/PSV-logo.png" },
+    venue: "Anfield",
+  },
+  {
+    id: 6,
+    date: "December 09, 2025. 2PM CDT",
+    team1: { name: "Inter Milan", logoUrl: "/logos/Inter-Milan-logo.png" },
+    team2: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
+    venue: "San Siro",
+  },
+  {
+    id: 7,
+    date: "January 21, 2025. 2PM CDT",
+    team1: { name: "Marseille", logoUrl: "/logos/Marseilla-logo.png" },
+    team2: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
+    venue: "Orange Vélodrome",
+  },
+  {
+    id: 8,
+    date: "November 26, 2025. 2PM CDT",
+    team1: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
+    team2: { name: "Qarabag FK", logoUrl: "/logos/Qarabag-logo.png" },
+    venue: "Anfield",
+  },
+
 ];
