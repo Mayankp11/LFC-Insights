@@ -25,7 +25,7 @@ export const matches: Match[] = [
   {
     id: 3,
     date: "October 22, 2025. 2PM CDT",
-    team1: { name: "Eintracht Frankfurt", logoUrl: "/logos/Eintracht Frankfurt-logo.png" },
+    team1: { name: "Eintracht Frankfurt", logoUrl: "/logos/Eintracht-Frankfurt-logo.png" },
     team2: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
     venue: "Deutsche Bank Park",
   },
@@ -53,14 +53,14 @@ export const matches: Match[] = [
   },
   {
     id: 7,
-    date: "January 21, 2025. 2PM CDT",
+    date: "January 21, 2026. 2PM CDT",
     team1: { name: "Marseille", logoUrl: "/logos/Marseilla-logo.png" },
     team2: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
     venue: "Orange Vélodrome",
   },
   {
     id: 8,
-    date: "November 26, 2025. 2PM CDT",
+    date: "January 28, 2026. 2PM CDT",
     team1: { name: "Liverpool FC", logoUrl: "/logos/LFC.png" },
     team2: { name: "Qarabag FK", logoUrl: "/logos/Qarabag-logo.png" },
     venue: "Anfield",
