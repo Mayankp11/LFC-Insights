@@ -6,14 +6,24 @@ import {
   Flex,
   Text,
   IconButton,
+  Image,
+  AspectRatio,
 } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
+interface Fixture {
+  date: string;
+  image?: string;
+}
 
-const Calendar: React.FC = () => {
+interface CalendarProps {
+  fixtures?: Fixture[];
+}
+
+const Calendar: React.FC<CalendarProps> = ({ fixtures = [] }) => {
   const [currentDate, setCurrentDate] = useState(dayjs());
 
   const monthStart = currentDate.startOf("month");
@@ -36,8 +46,20 @@ const Calendar: React.FC = () => {
   const prevMonth = () => setCurrentDate(currentDate.subtract(1, "month"));
   const nextMonth = () => setCurrentDate(currentDate.add(1, "month"));
 
+  const getFixture = (date: dayjs.Dayjs) => {
+    return fixtures.find((f) => dayjs(f.date).isSame(date, "day"));
+  };
+
   return (
-    <Box w="100%" maxW="700px" mx="auto" p={4} borderWidth="1px" borderRadius="lg" shadow="sm">
+    <Box
+      w="100%"
+      maxW="700px"
+      mx="auto"
+      p={4}
+      borderWidth="1px"
+      borderRadius="lg"
+      shadow="sm"
+    >
       {/* Header */}
       <Flex justify="space-between" align="center" mb={4}>
         <IconButton
@@ -60,12 +82,7 @@ const Calendar: React.FC = () => {
       {/* Weekdays */}
       <SimpleGrid columns={7} mb={2}>
         {weekDays.map((day) => (
-          <Text
-            key={day}
-            textAlign="center"
-            fontWeight="bold"
-            fontSize="sm"
-          >
+          <Text key={day} textAlign="center" fontWeight="bold" fontSize="sm">
             {day}
           </Text>
         ))}
@@ -77,18 +94,33 @@ const Calendar: React.FC = () => {
           <SimpleGrid key={i} columns={7} spacing={1}>
             {week.map((date) => {
               const isCurrentMonth = date.month() === currentDate.month();
+              const fixture = getFixture(date);
+
               return (
-                <Box
-                  key={date.toString()}
-                  borderWidth="1px"
-                  borderRadius="md"
-                  textAlign="center"
-                  py={6}
-                  bg={isCurrentMonth ? "white" : "gray.100"}
-                  color={isCurrentMonth ? "black" : "gray.400"}
-                >
-                  {date.date()}
-                </Box>
+                <AspectRatio ratio={1} w="100%">
+                  <Box
+                    key={date.toString()}
+                    borderWidth="1px"
+                    borderRadius="md"
+                    textAlign="center"
+                    bg={isCurrentMonth ? "white" : "gray.100"}
+                    color={isCurrentMonth ? "black" : "gray.400"}
+                    position="relative"
+                    backgroundImage={
+                      fixture?.image ? `url(${fixture.image})` : "none"
+                    }
+                    backgroundSize="60%" // ✅ control image size (e.g., 60% of box)
+                    backgroundPosition="center"
+                    backgroundRepeat="no-repeat"
+                    
+                  >
+                    {!fixture?.image && (
+                      <Text fontSize="sm" fontWeight="bold">
+                        {date.date()}
+                      </Text>
+                    )}
+                  </Box>
+                </AspectRatio>
               );
             })}
           </SimpleGrid>
