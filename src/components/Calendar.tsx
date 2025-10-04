@@ -57,6 +57,7 @@ const Calendar: React.FC<CalendarProps> = ({ fixtures = [] }) => {
       p={4}
       borderWidth="1px"
       borderRadius="lg"
+      borderColor={"blackAlpha.500"}
       shadow="sm"
     >
       {/* Header */}
@@ -67,7 +68,7 @@ const Calendar: React.FC<CalendarProps> = ({ fixtures = [] }) => {
           onClick={prevMonth}
           variant="ghost"
         />
-        <Text fontSize="xl" fontWeight="bold">
+        <Text fontSize="xl" fontWeight="semi-bold" fontFamily="Calistoga">
           {currentDate.format("MMMM YYYY")}
         </Text>
         <IconButton
@@ -81,7 +82,7 @@ const Calendar: React.FC<CalendarProps> = ({ fixtures = [] }) => {
       {/* Weekdays */}
       <SimpleGrid columns={7} mb={2}>
         {weekDays.map((day) => (
-          <Text key={day} textAlign="center" fontWeight="bold" fontSize="sm">
+          <Text key={day} textAlign="center"  fontSize="sm" fontFamily="Calistoga">
             {day}
           </Text>
         ))}
@@ -111,7 +112,6 @@ const Calendar: React.FC<CalendarProps> = ({ fixtures = [] }) => {
                     backgroundSize="60%" // ✅ control image size (e.g., 60% of box)
                     backgroundPosition="center"
                     backgroundRepeat="no-repeat"
-                    
                   >
                     {!fixture?.image && (
                       <Text fontSize="sm" fontWeight="bold">
