@@ -6,12 +6,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import RouterWithTransition from "./components/animation/RouterWithTransition";
 import MatchDay from "./pages/MatchDay";
-import Calendar from "./components/Calendar";
 import CalendarPage from "./pages/CalendarPage";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
+      <Header/>
       <Routes>
         <Route element={<RouterWithTransition />}>
           {/* Home route */}
