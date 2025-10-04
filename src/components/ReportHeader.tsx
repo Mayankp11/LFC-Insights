@@ -1,78 +1,73 @@
 // src/components/ReportHeader.tsx
-import { Box, SimpleGrid, Image } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import HomeButton from "./button/HomeButton";
+import CalendarButton from "./button/CalendarButton";
 
 interface ReportHeaderProps {
   team1Logo: string;
   team2Logo: string;
   date: string;
-  optionalImage?: string; // optional image for 3rd grid
+  optionalImage?: string; // optional image for score/banner/etc.
 }
 
 const ReportHeader: React.FC<ReportHeaderProps> = ({
   team1Logo,
   team2Logo,
-
   optionalImage,
 }) => {
   return (
-    <Box w="100%" p={0}>
-      <SimpleGrid row={{ base: 1, md: 3 }} spacing={0} alignItems="center">
-        {/* Team logos row */}
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          backgroundColor="blackAlpha.900"
-          p={4}
-        >
-          {/* Left spacer "can be empyty" */}
-          <Box/>
+    <Box w="100%">
+      {/* Header Row */}
+      <Box bg="blackAlpha.900" p={4}>
+        <Flex align="center" justify="space-between">
+          {/* Left spacer (or future buttons) */}
+          <Box w="80px" />
 
-          {/* Centered logos */}
-          <Box display="flex" gap={4}>
+          {/* Centered Logos */}
+          <Flex flex="1" justify="center" align="center" gap={6}>
             <Image
               src={team1Logo}
               alt="Team 1"
-              boxSize="80px"
+              boxSize={{ base: "60px", md: "80px" }}
               objectFit="contain"
-              bg="transparent"
             />
             <Image
               src={team2Logo}
               alt="Team 2"
-              boxSize="80px"
+              boxSize={{ base: "60px", md: "80px" }}
               objectFit="contain"
             />
-          </Box>
+          </Flex>
 
-          {/* Home button pinned to right */}
-          <HomeButton />
-        </Box>
+          {/* Right-side buttons */}
+          {/* Right-side buttons */}
+          <Flex gap={0}>
+            <HomeButton />
+            <CalendarButton />
+          </Flex>
+        </Flex>
+      </Box>
 
-        {/* Full time score */}
+      {/* Optional image row (no black background) */}
+      {optionalImage && (
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
-          border="2px solid black"
           w="100%"
-          p={4}
+          mt={4}
         >
-          {optionalImage && (
-            <Image
-              src={optionalImage}
-              alt="Optional"
-              maxW="50%" // image will not exceed container width
-              maxH="500px"
-              objectFit="contain"
-              borderRadius="md"
-              mx="auto" // ensure the image is centered horizontally
-            />
-          )}
+          <Image
+            src={optionalImage}
+            alt="Optional"
+            maxW={{ base: "80%", md: "50%" }}
+            maxH="300px"
+            objectFit="contain"
+            borderRadius="md"
+          />
         </Box>
-      </SimpleGrid>
+      )}
     </Box>
   );
 };
