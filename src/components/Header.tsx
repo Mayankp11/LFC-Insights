@@ -7,7 +7,6 @@ import {
   Stack,
   useDisclosure,
   HStack,
-  Text,
 } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
