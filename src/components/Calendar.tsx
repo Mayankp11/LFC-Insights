@@ -6,7 +6,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Image,
   AspectRatio,
 } from "@chakra-ui/react";
 import dayjs from "dayjs";
