@@ -10,9 +10,7 @@ interface TitleProps {
 const Title: React.FC<TitleProps> = ({ title, subtitle}) => {
   return (
     <Box
-      //   display="flex"
       w={"90vw"}
-      // h={"80vw"}
       alignItems="center"
       justifyContent="center"
       border="2px solid black"
