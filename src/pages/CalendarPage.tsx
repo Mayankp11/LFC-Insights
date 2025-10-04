@@ -2,6 +2,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import Calendar from "../components/Calendar";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
 const CalendarPage = () => {
