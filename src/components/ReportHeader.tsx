@@ -1,8 +1,6 @@
 // src/components/ReportHeader.tsx
 import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
-import HomeButton from "./button/HomeButton";
-import CalendarButton from "./button/CalendarButton";
 
 interface ReportHeaderProps {
   team1Logo: string;
@@ -40,12 +38,6 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
             />
           </Flex>
 
-          {/* Right-side buttons */}
-          {/* Right-side buttons */}
-          <Flex gap={0}>
-            <HomeButton />
-            <CalendarButton />
-          </Flex>
         </Flex>
       </Box>
 
