@@ -8,6 +8,7 @@ import RouterWithTransition from "./components/animation/RouterWithTransition";
 import MatchDay from "./pages/MatchDay";
 import CalendarPage from "./pages/CalendarPage";
 import Header from "./components/Header";
+import HomeBanner from "./components/HomeBanner";
 
 function App() {
   return (
@@ -27,12 +28,7 @@ function App() {
                 gap={8}
                 textAlign="center"
               >
-                <Box>
-                  <Title
-                    title="Liverpool FC"
-                    subtitle="You'll Never Walk Alone"
-                  />
-                </Box>
+                <HomeBanner/>
 
                 <Box>
                   <MatchDay matchId={3} />
