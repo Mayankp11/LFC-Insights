@@ -1,6 +1,5 @@
 // src/App.tsx
 import { Box, Button, Flex } from "@chakra-ui/react";
-import Title from "./components/Title";
 import MatchDay1Report from "./pages/reports/MatchDay1Report";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
